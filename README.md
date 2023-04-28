@@ -1,4 +1,8 @@
-# fedora-config
+<div align="center">
+<img width="100" height="100" src="assets/tux.png" alt="image of tux">
+</div>
+
+<h1 align="center"> fedora-config </h1>
 
 All my configs for my fedora desktop setup 😎
 
