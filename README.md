@@ -12,3 +12,4 @@ All my configs for my fedora desktop setup 😎
 - bash configuration with starship and Gogh
 - Enabling lukenukem/asus-linux and Installing Rog Control Center.
 - Only office Installation, vs code, Neovim and Wine.
+- Nerd font Installation.
