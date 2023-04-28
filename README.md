@@ -1,2 +1,3 @@
 # fedora-config
-All my configs for fedora desktop setup 😎
+
+All my configs for my fedora desktop setup 😎
