@@ -1,7 +1,12 @@
 #!/bin/bash
 
-curl -sS https://starship.rs/install.sh | sh
+if [ -n "$(which starship)" ]; then
+    echo "Starship 🚀 is already installed !!!"
 
-# run ./starship-installation.sh
-chmod +x install_starship.sh
+else
+    echo "Installing Starship. 🚀"
+
+    curl -sS https://starship.rs/install.sh | sh
+    chmod +x install_starship.sh # run ./starship-installation.sh
+fi
 
