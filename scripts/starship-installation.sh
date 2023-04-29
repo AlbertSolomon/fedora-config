@@ -20,5 +20,11 @@ fi
 if bash -c "$(wget -qO- https://git.io/vQgMr &>/dev/null)"; then
     echo "The Gogh color scheme ⾊ is installed."
 else
-    bash -c "$(wget -qO- https://git.io/vQgMr)"
+    echo "The Gogh color scheme ⾊ is not installed. Attempting to install..."
+
+    if bash -c "$(wget -qO- https://git.io/vQgMr)"; then
+        echo "The Gogh color scheme ⾊ was installed successfully."
+    else
+        echo "Failed to install the Gogh color scheme ⾊."
+    fi
 fi
