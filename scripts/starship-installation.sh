@@ -14,3 +14,11 @@ else
     echo "$INIT_COMMAND"
 
 fi
+
+# Installing Gogh color scheme and all its themes.
+
+if bash -c "$(wget -qO- https://git.io/vQgMr &>/dev/null)"; then
+    echo "The Gogh color scheme ⾊ is installed."
+else
+    bash -c "$(wget -qO- https://git.io/vQgMr)"
+fi
