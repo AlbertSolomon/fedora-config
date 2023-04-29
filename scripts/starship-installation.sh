@@ -15,3 +15,4 @@ else
 
 fi
 
+# Installing Gogh and all its themes.
