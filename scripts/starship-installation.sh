@@ -14,5 +14,3 @@ else
     echo "$INIT_COMMAND"
 
 fi
-
-# Installing Gogh and all its themes.
