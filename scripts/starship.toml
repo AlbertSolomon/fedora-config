@@ -1,7 +1,7 @@
 # Disable the package module, hiding it from the prompt completely
 
 [package]
-disabled = false
+disabled = true
 
 [username]
 format = " [$user]($style)@"
@@ -86,7 +86,7 @@ format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
 symbol = " "
-style = "bg:#FF6003"
+style = "bg:cyan"
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
