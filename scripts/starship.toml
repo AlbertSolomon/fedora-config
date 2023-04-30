@@ -86,7 +86,7 @@ format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
 symbol = " "
-style = "bg:cyan"
+style = "bg:#FF6003"
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
@@ -129,5 +129,4 @@ disabled = false
 [sudo]
 style = 'bold green'
 symbol = '👩‍💻 '
-disabled = false
-
+disabled = true
