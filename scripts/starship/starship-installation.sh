@@ -13,6 +13,14 @@ else
     echo "adding >> eval "$(starship init bash)" to ~/.bashrc file"
     echo "$INIT_COMMAND"
 
+    # Downloading starship.toml from https://github.com/AlbertSolomon/fedora-config/blob/main/scripts/starship/starship.toml
+    echo "Downloading starship.toml from https://github.com/AlbertSolomon/fedora-config/"
+    curl -sSL https://raw.githubusercontent.com/AlbertSolomon/fedora-config/main/scripts/starship/starship.toml -o ~/starship.toml
+
+    # Moving the starship.toml file to the ~/.config/ directory
+    echo "moving ~/starship.toml to ~/config/"
+    mv ~/starship.toml ~/.config/
+
 fi
 
 # Installing Gogh color scheme and all its themes.
