@@ -36,6 +36,10 @@ else
     echo "copy this and add it to GRUB::intel::--> GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_pstate=disable" ::AMD::--> GRUB_CMDLINE_LINUX_DEFAULT="quiet splash initcall_blacklist=amd_pstate_init amd_pstate.enable=0""
     echo "lunching nano::-->"
     sudo nano /etc/default/grub
+
+    echo "updating GRUB"
+    # will try to chech for legacy boot method for GRUB update
+    sudo grub2-mkconfig -o /etc/grub2.cfg
 fi
 
 chmod +x "$0"
