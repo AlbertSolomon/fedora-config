@@ -27,7 +27,13 @@ if [ -n "$(auto-cpufreq --version)" ]; then
     auto-cpufreq --version
     echo "auto-cpufreq is already installed !!!"
 else
-    echo "lets goooooo"
+    sudo snap install auto-cpufreq
+
+    echo "running auto-cpufreq on boot up"
+    sudo systemctl enable --now auto-cpufreq.service
+
+    echo "auto-cpufreq does not work well with -->  intel_pstate/amd-pstate ::: consider changing it to acpi-cpufreq by adding the following commands in GRUB for intel and AMD respectively:"
+     
 fi
 
 chmod +x "$0"
