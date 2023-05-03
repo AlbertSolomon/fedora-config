@@ -7,6 +7,7 @@ echo "installing snaps... 🚀"
 
 if [ -n "$(which snap)" ]; then
     echo "snaps are installed "
+
 else
     sudo dnf install snapd
 
@@ -15,6 +16,12 @@ else
     sudo ln -s /var/lib/snapd/snap /snap
 
     # verifying snap installation
+    if [ -n "$(snap version)" ]; then
+        snap version
+        echo "snap installation was successful"
+    else
+        echo "snap installation failed, Please try again ..."
+    fi 
 
 fi
 
