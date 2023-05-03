@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # make sure you read this guide [https://www.fosslinux.com/1599/powertop-for-fedora-helps-increase-laptops-battery-life.htm] before running this script
+echo "2. Installing powertop 🚀"
 
 if [ -n "$(which powertop)" ]; then
     echo "powertop is installed"
