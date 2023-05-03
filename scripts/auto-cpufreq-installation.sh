@@ -7,7 +7,6 @@ echo "installing snaps... 🚀"
 
 if [ -n "$(which snap)" ]; then
     echo "snaps are installed "
-
 else
     sudo dnf install snapd
 
@@ -22,7 +21,13 @@ else
     else
         echo "snap installation failed, Please try again ..."
     fi 
+fi
 
+if [ -n "$(auto-cpufreq --version)" ]; then
+    auto-cpufreq --version
+    echo "auto-cpufreq is already installed !!!"
+else
+    echo "lets goooooo"
 fi
 
 chmod +x "$0"
