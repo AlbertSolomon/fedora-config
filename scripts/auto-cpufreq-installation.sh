@@ -38,8 +38,9 @@ else
     sudo nano /etc/default/grub
 
     echo "updating GRUB"
-    # will try to chech for legacy boot method for GRUB update
+    # will try to check for legacy boot method for GRUB update
     sudo grub2-mkconfig -o /etc/grub2.cfg
+
 fi
 
 chmod +x "$0"
