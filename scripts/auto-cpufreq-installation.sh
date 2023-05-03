@@ -33,7 +33,9 @@ else
     sudo systemctl enable --now auto-cpufreq.service
 
     echo "auto-cpufreq does not work well with -->  intel_pstate/amd-pstate ::: consider changing it to acpi-cpufreq by adding the following commands in GRUB for intel and AMD respectively:"
-     
+    echo "copy this and add it to GRUB::intel::--> GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_pstate=disable" ::AMD::--> GRUB_CMDLINE_LINUX_DEFAULT="quiet splash initcall_blacklist=amd_pstate_init amd_pstate.enable=0""
+    echo "lunching nano::-->"
+    sudo nano /etc/default/grub
 fi
 
 chmod +x "$0"
