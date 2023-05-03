@@ -10,6 +10,12 @@ if [ -n "$(which snap)" ]; then
 else
     sudo dnf install snapd
 
+    # enabling snaps 
+    echo "enabling snaps ..."
+    sudo ln -s /var/lib/snapd/snap /snap
+
+    # verifying snap installation
+
 fi
 
 chmod +x "$0"
