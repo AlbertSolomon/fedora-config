@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Asus on Linux"
+echo "3. Asus on Linux"
 
 # Define the files to modify
 files=("/etc/yum.repos.d/fedora.repo" "/etc/yum.repos.d/fedora-updates.repo" "/etc/yum.repos.d/fedora-updates-testing.repo")
