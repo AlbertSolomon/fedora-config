@@ -21,4 +21,16 @@ do
         fi
 done
 
+read -p "Is your laptop older than 2022? (y/n): " answer
+if [ "$answer" == "y" ]; then
+    sudo dnf copr enable lukenukem/asus-linux
+
+elif [ "$answer" == "n" ]; then
+    sudo dnf copr enable lukenukem/asus-kernel
+
+else
+    echo "Invalid input. Please enter 'y' for yes or 'n' for no."
+    exit 1
+fi
+
 chmod +x "$0"
