@@ -33,4 +33,13 @@ else
     exit 1
 fi
 
+echo "
+    UPDATE THE SOFTWARE STORE LIKE SO:
+    1.Open Software store
+    2.Navigate to Updates tab
+    3.Click the Refresh-button in the top left corner
+    4.Download all available updates
+    
+    "
+
 chmod +x "$0"
