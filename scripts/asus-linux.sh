@@ -22,6 +22,7 @@ do
 done
 
 read -p "Is your laptop older than 2022? (y/n): " answer
+
 # check if repo is already enabled
 if [ "$answer" == "y" ]; then
     sudo dnf copr enable lukenukem/asus-linux
@@ -53,6 +54,18 @@ else
 
     echo "enabling 🐧 asusctl..."
     sudo systemctl enable supergfxd.service
+fi
+
+read -p "do you wish to install ROG-GUI? (y/n)" option
+if [ "$option" = "y" ]; then
+    sudo dnf install rog-gui
+
+elif [ "$option" = "n" ]; then
+    echo "setup complete ..."
+
+else
+    echo "Invalid input. Please enter 'y' for yes or 'n' for no."
+    exit 1
 fi
 
 chmod +x "$0"
