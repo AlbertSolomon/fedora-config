@@ -42,7 +42,7 @@ echo "
     
     "
 
-if [ -n "$(which asusctl)"]; then
+if [ -n "$(which asusctl)" ]; then
     echo "
     asusctl is installed ...!
     
