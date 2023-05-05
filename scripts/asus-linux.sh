@@ -22,6 +22,7 @@ do
 done
 
 read -p "Is your laptop older than 2022? (y/n): " answer
+# check if repo is already enabled
 if [ "$answer" == "y" ]; then
     sudo dnf copr enable lukenukem/asus-linux
 
@@ -39,12 +40,10 @@ echo "
     2.Navigate to Updates tab
     3.Click the Refresh-button in the top left corner
     4.Download all available updates
-    
     "
 
 if [ -n "$(which asusctl)" ]; then
-    echo "
-    asusctl is installed ...!
+    echo " asusctl is installed ...!
     
     "
 else
