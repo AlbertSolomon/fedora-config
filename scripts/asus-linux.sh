@@ -57,10 +57,10 @@ else
 fi
 
 read -p "do you wish to install ROG-GUI? (y/n)" option
-if [ "$option" = "y" ]; then
+if [ "$option" == "y" ]; then
     sudo dnf install asusctl-rog-gui
 
-elif [ "$option" = "n" ]; then
+elif [ "$option" == "n" ]; then
     echo "setup complete ..."
 
 else
