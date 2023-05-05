@@ -49,9 +49,11 @@ if [ -n "$(which asusctl)"]; then
     "
 else
     echo "Installing asusctl ..."
-    
     sudo dnf install asusctl supergfxctl
     sudo dnf update --refresh
+
+    echo "enabling 🐧 asusctl..."
+    sudo systemctl enable supergfxd.service
 fi
 
 chmod +x "$0"
