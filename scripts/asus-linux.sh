@@ -42,4 +42,16 @@ echo "
     
     "
 
+if [ -n "$(which asusctl)"]; then
+    echo "
+    asusctl is installed ...!
+    
+    "
+else
+    echo "Installing asusctl ..."
+    
+    sudo dnf install asusctl supergfxctl
+    sudo dnf update --refresh
+fi
+
 chmod +x "$0"
