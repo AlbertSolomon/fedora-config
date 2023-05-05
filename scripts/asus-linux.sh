@@ -68,4 +68,6 @@ else
     exit 1
 fi
 
+systemctl start asusd
+
 chmod +x "$0"
