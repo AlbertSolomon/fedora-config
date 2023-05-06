@@ -15,4 +15,8 @@ else
     echo "checking for updates..."
     dnf check-update
 
+
+    echo "Installing now..."
+    sudo dnf install code    
+
 chmod +x "$0"
