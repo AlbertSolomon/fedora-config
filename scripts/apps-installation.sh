@@ -19,7 +19,18 @@ else
     echo "Installing now..."
     sudo dnf install code
     echo "Installing is done we good to go.."
-    
-fi    
+
+fi
+
+# installing wine 
+if [ -n "$(which wine)" ]; then
+    echo "wine is already installed"
+
+else
+    echo "configuring wine repository..."
+    sudo dnf -y install dnf-plugins-core 
+    sudo rpm --import https://dl.winehq.org/wine-builds/winehq.key
+
+fi
 
 chmod +x "$0"
