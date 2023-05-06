@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing all major apps..."
+echo "5. Installing all major apps..."
 
 # installing vs code 
 
@@ -18,6 +18,8 @@ else
 
     echo "Installing now..."
     sudo dnf install code
-    echo "Installing is done we good to go.."    
+    echo "Installing is done we good to go.."
+    
+fi    
 
 chmod +x "$0"
