@@ -31,6 +31,10 @@ else
     sudo dnf -y install dnf-plugins-core 
     sudo rpm --import https://dl.winehq.org/wine-builds/winehq.key
 
+    echo "adding wine 🍷 repository..."
+    source /etc/os-release 
+    sudo dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/${VERSION_ID}/winehq.repo
+
 fi
 
 chmod +x "$0"
