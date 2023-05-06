@@ -35,6 +35,8 @@ else
     source /etc/os-release 
     sudo dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/${VERSION_ID}/winehq.repo
 
+    echo "Installing wine 🍷 "
+
 fi
 
 chmod +x "$0"
