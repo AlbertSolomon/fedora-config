@@ -36,7 +36,10 @@ else
     sudo dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/${VERSION_ID}/winehq.repo
 
     echo "Installing wine 🍷 "
+    sudo dnf install winehq-stable
 
+    echo "configuring wine "
+    winecfg 
 fi
 
 chmod +x "$0"
