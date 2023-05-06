@@ -17,6 +17,7 @@ else
 
 
     echo "Installing now..."
-    sudo dnf install code    
+    sudo dnf install code
+    echo "Installing is done we good to go.."    
 
 chmod +x "$0"
