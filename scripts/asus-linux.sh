@@ -56,7 +56,7 @@ else
     sudo systemctl enable supergfxd.service
 fi
 
-read -p "do you wish to install ROG-GUI? (y/n)" option
+read -p "do you wish to install ROG-GUI? (y/n):" option
 if [ "$option" == "y" ]; then
     sudo dnf install asusctl-rog-gui
 

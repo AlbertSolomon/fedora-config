@@ -33,6 +33,8 @@ else
     if bash -c "$(wget -qO- https://git.io/vQgMr)"; then
         echo "The Gogh color scheme ⾊ was installed successfully."
     else
-        echo "Failed to install the Gogh color scheme ⾊."
+        echo "Failed to install the Gogh color scheme ⾊.
+        
+        "
     fi
 fi
