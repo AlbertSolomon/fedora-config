@@ -53,6 +53,7 @@ else
     echo "configuring the fuck..."
     eval "$(thefuck --alias)"
 
-
-
+    echo "applying changes ..."
+    source ~/.bashrc
+    
 chmod +x "$0"
