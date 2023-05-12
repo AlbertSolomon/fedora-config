@@ -42,4 +42,15 @@ else
     winecfg 
 fi
 
+# Installing thefuck,                   eval "$(thefuck --alias)"
+if [ -n "${which thefuck}" ]; then
+    echo "Fuck!!! we good 👍🏿 "
+
+else
+    echo "Installing the fuck"
+    pip install thefuck
+
+
+
+
 chmod +x "$0"
