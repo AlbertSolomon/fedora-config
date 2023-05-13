@@ -55,5 +55,7 @@ else
 
     echo "applying changes ..."
     source ~/.bashrc
-    
-chmod +x "$0"
+fi
+# https://sbulav.github.io/tools/fzf-on-fedora/ Installing fuzzy finder
+
+chmod +x "$0"   
