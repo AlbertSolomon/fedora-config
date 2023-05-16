@@ -58,4 +58,12 @@ else
 fi
 # https://sbulav.github.io/tools/fzf-on-fedora/ Installing fuzzy finder
 
+#installing neovim
+if [ -n "${which neovim}" ]; then
+    echo "Neovim is already installed"
+
+else
+    echo "Installing Neovim..."
+    sudo dnf install neovim
+
 chmod +x "$0"   
