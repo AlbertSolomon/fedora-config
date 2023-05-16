@@ -65,5 +65,6 @@ if [ -n "${which neovim}" ]; then
 else
     echo "Installing Neovim..."
     sudo dnf install neovim
+fi
 
 chmod +x "$0"   
