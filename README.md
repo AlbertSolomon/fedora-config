@@ -4,7 +4,7 @@
 
 <h1 align="center"> fedora-config </h1>
 
-All my configs for my fedora desktop setup 😎
+All the  configs  for a freshly Fedora desktop setup 😎
 
 ## This will include but not limited to
 
