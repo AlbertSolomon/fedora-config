@@ -67,4 +67,14 @@ else
     sudo dnf install neovim
 fi
 
+# installing onlyoffice 
+
+if [ "${which onlyoffice}" ]; then
+    echo "onlyOffice is already installed"
+else
+    echo "Installing only Office...."
+    sudo wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm
+    sudo dnf install onlyoffice-desktopeditors.rpm
+fi
+
 chmod +x "$0"   
