@@ -8,6 +8,7 @@ if [ -n "$()" ]; then
     
 else 
     sudo dnf install python
+    sudo dnf install pip
 fi
 
 chmod +x "$0"
