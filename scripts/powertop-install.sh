@@ -11,8 +11,7 @@ else
 
     echo "powertop installed successfully"
 
-    # automatically set all tunables to ‘Good,
-    echo "automatically setting all tunables to ‘Good at boot up (optimal power saving mode )"
+    # automatically set all tunables to ‘Good, echo "automatically setting all tunables to ‘Good at boot up (optimal power saving mode )"
     sudo systemctl enable powertop.service
 fi
 
