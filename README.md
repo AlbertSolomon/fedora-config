@@ -25,3 +25,4 @@ All the  configs  for a freshly Fedora desktop installation. 😎
 - Only office Installation, vs code, Neovim and Wine.
 - Nerd font Installation.
 - Time Shift Installation.
+- Network Configurations.
