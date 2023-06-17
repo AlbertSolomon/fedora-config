@@ -12,6 +12,11 @@ echo 'keepcache=true' | sudo tee -a /etc/dnf/dnf.conf
 sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
 sudo dnf groupupdate sound-and-video
 
+# enabling RPM fusion packages
+sudo dnf install \ https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm # free packages
+sudo dnf install \ https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm # nonfree packages
+sudo dnf groupupdate core # update all packages
+
 # installing vs code 
 
 if [ -n "$(which code)" ]; then
