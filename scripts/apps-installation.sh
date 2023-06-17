@@ -8,6 +8,10 @@ echo 'max_parallel_downloads=5' | sudo tee -a /etc/dnf/dnf.conf
 echo 'defaultyes=True' | sudo tee -a /etc/dnf/dnf.conf
 echo 'keepcache=true' | sudo tee -a /etc/dnf/dnf.conf
 
+# Installing multimedia codecs
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+sudo dnf groupupdate sound-and-video
+
 # installing vs code 
 
 if [ -n "$(which code)" ]; then
