@@ -93,3 +93,5 @@ else
 fi
 
 chmod +x "$0"   
+
+# Push to wifi notification from gnome-portal-helper to notifications on fedora
