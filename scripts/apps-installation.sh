@@ -92,6 +92,13 @@ else
     sudo dnf install onlyoffice-desktopeditors.rpm
 fi
 
+if [ "$(which emacs)"]; then 
+    echo "Emacs already installed.."
+else
+    echo "Installing emacs"
+    sudo dnf install emacs
+fi
+
 chmod +x "$0"   
 
 # Push to wifi notification from gnome-portal-helper to notifications on fedora
