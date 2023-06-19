@@ -57,20 +57,20 @@ else
     winecfg 
 fi
 
-# Installing thefuck,
-if [ -n "${which thefuck}" ]; then
-    echo "Fuck!!! we good 👍🏿 "
-
-else
-    echo "Installing the fuck"
-    pip install thefuck
-
-    echo "configuring the fuck..."
-    eval "$(thefuck --alias)"
-
-    echo "applying changes ..."
-    source ~/.bashrc
-fi
+# Installing thefuck, install pip first
+# if [ -n "${which thefuck}" ]; then
+#     echo "Fuck!!! we good 👍🏿 "
+# 
+# else
+#     echo "Installing the fuck"
+#     pip install thefuck
+# 
+#     echo "configuring the fuck..."
+#     eval "$(thefuck --alias)"
+# 
+#     echo "applying changes ..."
+#     source ~/.bashrc
+# fi
 # https://sbulav.github.io/tools/fzf-on-fedora/ Installing fuzzy finder
 
 #installing neovim
