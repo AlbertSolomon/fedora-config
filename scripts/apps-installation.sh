@@ -74,7 +74,7 @@ fi
 # https://sbulav.github.io/tools/fzf-on-fedora/ Installing fuzzy finder
 
 #installing neovim
-if [ -n "${which neovim}" ]; then
+if [ -n "$(which neovim)" ]; then
     echo "Neovim is already installed"
 
 else
@@ -84,7 +84,7 @@ fi
 
 # installing onlyoffice 
 
-if [ "${which onlyoffice}" ]; then
+if [ "$(which onlyoffice)" ]; then
     echo "onlyOffice is already installed"
 else
     echo "Installing only Office...."
@@ -92,6 +92,7 @@ else
     sudo dnf install onlyoffice-desktopeditors.rpm
 fi
 
+# Installing emacs
 if [ "$(which emacs)"]; then 
     echo "Emacs already installed.."
 else
