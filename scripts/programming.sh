@@ -24,5 +24,13 @@ else
     echo "Installing Rust.."
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     source "$HOME/.cargo/env"
+fi
+
+if [ -n "$(which node)"]; then
+    echo "Nodejs is already installed..."
+else
+    echo "Installing node js..."
+    sudo dnf install nodejs
+fi
 
 chmod +x "$0"
