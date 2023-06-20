@@ -14,6 +14,7 @@ fi
 if [ -n "$(which go)"]; then 
     echo "Go is already installed "
 else 
+    echo "Installing golang...."
     sudo dnf install golang
 fi
 
