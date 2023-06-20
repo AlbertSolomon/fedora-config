@@ -3,7 +3,7 @@
 echo "Programming configuration...."
 
 # Installing python 
-if [ -n "$()" ]; then
+if [ -n "$(which python)" ]; then
     echo "Python is already installed.. updating python"
     
 else 
