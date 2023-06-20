@@ -33,4 +33,10 @@ else
     sudo dnf install nodejs
 fi
 
+if [ -n "$(which gcc)"]; then 
+    echo "C compiler is already installed..."
+else
+    sudo dnf install gcc gcc-c++
+fi
+
 chmod +x "$0"
