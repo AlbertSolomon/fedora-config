@@ -11,4 +11,10 @@ else
     sudo dnf install pip
 fi
 
+if [ -n "$(which go)"]; then 
+    echo "Go is already installed "
+else 
+    sudo dnf install golang
+fi
+
 chmod +x "$0"
