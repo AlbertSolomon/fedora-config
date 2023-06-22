@@ -8,6 +8,7 @@ if [ -n "$(which python)" ]; then
     
 else 
     sudo dnf install python
+    sudo dnf install python3-tkinter
     sudo dnf install pip
 fi
 
@@ -38,5 +39,7 @@ if [ -n "$(which gcc)"]; then
 else
     sudo dnf install gcc gcc-c++
 fi
+
+# Try to install java / jdk
 
 chmod +x "$0"
