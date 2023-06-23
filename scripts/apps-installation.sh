@@ -102,5 +102,4 @@ fi
 
 chmod +x "$0"   
 
-# Push to wifi notification from gnome-portal-helper to notifications on fedora
-# install Coverflow Alt-Tab extension 
+# Push to wifi notification from gnome-portal-helper to notifications on fedora 

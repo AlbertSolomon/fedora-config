@@ -26,3 +26,9 @@ All the  configs  for a freshly Fedora desktop installation. 😎
 - Nerd font Installation.
 - Time Shift Installation.
 - Network Configurations.
+
+## Extensions
+
+- Coverflow Alt-Tab
+- Blur my shell
+- User themes
