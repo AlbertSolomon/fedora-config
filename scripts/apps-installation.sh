@@ -22,7 +22,7 @@ sudo dnf groupupdate core # update all packages
 if [ -n "$(which code)" ]; then
     echo "vs code is already installed"
 else
-    echo "INstalling vs code..."
+    echo "Installing vs code..."
 
     sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
     sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
@@ -57,20 +57,6 @@ else
     winecfg 
 fi
 
-# Installing thefuck, install pip first
-# if [ -n "${which thefuck}" ]; then
-#     echo "Fuck!!! we good 👍🏿 "
-# 
-# else
-#     echo "Installing the fuck"
-#     pip install thefuck
-# 
-#     echo "configuring the fuck..."
-#     eval "$(thefuck --alias)"
-# 
-#     echo "applying changes ..."
-#     source ~/.bashrc
-# fi
 # https://sbulav.github.io/tools/fzf-on-fedora/ Installing fuzzy finder
 
 #installing neovim
