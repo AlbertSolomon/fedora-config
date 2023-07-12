@@ -86,4 +86,12 @@ else
     sudo dnf install emacs
 fi
 
+# adding zoxide an autojump alternative 
+if [ "$(which zoxide)"]; then 
+    echo "Zoxide is already installed " # if you wish to install from source copy 👉🏿 link https://github.com/ajeetdsouza/zoxide#installation
+else
+    sudo dnf install zoxide
+    
+fi 
+
 chmod +x "$0"  # Push to wifi notification from gnome-portal-helper to notifications on fedora 
