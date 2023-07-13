@@ -91,7 +91,15 @@ if [ "$(which zoxide)"]; then
     echo "Zoxide is already installed " # if you wish to install from source copy 👉🏿 link https://github.com/ajeetdsouza/zoxide#installation
 else
     sudo dnf install zoxide
-    
+    # zoxide configuration
+    if grep -Fxq 'eval "$(zoxide init bash)"' ~/.bashrc
+    then
+        echo "~/.bashrc is already configured..."
+    else
+        echo "configuring zoxide in ~/.bashrc"
+        echo 'eval "$(zoxide init bash)"' >> ~/.bashrc
+        echo "~/.bashrc configured successfully..."
+    fi
 fi 
 
 chmod +x "$0"  # Push to wifi notification from gnome-portal-helper to notifications on fedora 
