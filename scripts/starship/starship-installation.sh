@@ -11,7 +11,8 @@ else
     chmod +x install_starship.sh # run ./starship-installation.sh
 
     echo "adding >> eval "$(starship init bash)" to ~/.bashrc file"
-    echo "$INIT_COMMAND"
+    echo -e "\n$INIT_COMMAND" >> ~/.bashrc
+    echo "command added successfully..."
 
     # Downloading starship.toml from https://github.com/AlbertSolomon/fedora-config/blob/main/scripts/starship/starship.toml
     echo "Downloading starship.toml from https://github.com/AlbertSolomon/fedora-config/"
