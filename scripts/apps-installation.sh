@@ -66,6 +66,7 @@ if [ -n "$(which neovim)" ]; then
 else
     echo "Installing Neovim..."
     sudo dnf install neovim
+    echo "Installation completed successfully...!"
 fi
 
 # installing onlyoffice 
