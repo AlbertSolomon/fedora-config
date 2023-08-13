@@ -17,4 +17,4 @@ else
 	# cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/JetBrainsMono/JetBrainsMono-Regular.otf
 fi
 
-chmod +x "$0"
+# chmod +x "$0"
