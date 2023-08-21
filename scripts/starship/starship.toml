@@ -57,7 +57,7 @@ disabled = false
 
 [c]
 symbol = " "
-style = "bg:#FF6003"
+style = "bg:#FFFFFF fg:#48494 bold"
 format = '[ $symbol ($version) ]($style)'
 
 [docker_context]
