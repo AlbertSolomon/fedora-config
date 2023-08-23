@@ -96,7 +96,7 @@ format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = " "
-style = "bg:#FF6003"
+style = "bg:#704E2E fg:#FFFFFF bold"
 format = '[ $symbol ($version) ]($style)'
 
 [julia]
