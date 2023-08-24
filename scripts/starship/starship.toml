@@ -86,7 +86,7 @@ format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
 symbol = " "
-style = "bg:#FFFFFF fg:#00ADD8 bold"
+style = "bg:#333a45 fg:#00ADD8 bold"
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
