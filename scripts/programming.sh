@@ -1,4 +1,5 @@
 #!/bin/bash
+GREEN="\e[32m"
 
 echo "Programming configuration...."
 
@@ -37,6 +38,7 @@ fi
 if [ -n "$(which gcc)"]; then 
     echo "C compiler is already installed..."
 else
+    echo -e "${GREEN}[!] Installing C compiler..dd"
     sudo dnf install gcc gcc-c++
 fi
 
