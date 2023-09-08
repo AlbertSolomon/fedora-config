@@ -32,3 +32,4 @@ All the  configs  for a freshly Fedora desktop installation. 😎
 - Coverflow Alt-Tab
 - Blur my shell
 - User themes
+- Bibata cursor theme
