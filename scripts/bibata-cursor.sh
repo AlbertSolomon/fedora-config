@@ -10,3 +10,8 @@ echo -e "${GREEN} ##############################################################
                     use gnome tweeks to select this the cursor theme\n
 \n
 ##########################################################################################"
+
+# manual installation [https://github.com/ful1e5/Bibata_Cursor]
+# tar -xvf Bibata.tar.gz                # extract `Bibata.tar.gz`
+# mv Bibata-* ~/.icons/                 # Install to local users
+# sudo mv Bibata-* /usr/share/icons/    # Install to all users
