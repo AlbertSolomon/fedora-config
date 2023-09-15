@@ -4,16 +4,19 @@
 echo "2. Installing powertop 🚀"
 
 if [ -n "$(which powertop)" ]; then
-    echo "powertop is installed"
+	echo "powertop is installed"
+
+	echo "automatically setting all tunables to ‘Good at boot up (optimal power saving mode)"
+	sudo systemctl enable powertop.service
 else
-    echo "powertop is not installed... Instlling powertop"
-    sudo dnf install powertop
+	echo "powertop is not installed... Instlling powertop"
+	sudo dnf install powertop
 
-    echo "powertop installed successfully"
+	echo "powertop installed successfully"
 
-    # automatically set all tunables to ‘Good, 
-    echo "automatically setting all tunables to ‘Good at boot up (optimal power saving mode)"
-    sudo systemctl enable powertop.service
+	# automatically set all tunables to ‘Good,
+	echo "automatically setting all tunables to ‘Good at boot up (optimal power saving mode)"
+	sudo systemctl enable powertop.service
 fi
 
 chmod +x "$0" # $0 refers the script itself
