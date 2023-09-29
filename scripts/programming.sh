@@ -43,7 +43,7 @@ else
 fi
 
 # Try to install java / jdk
-if [-n "$(which bun)"]; then
+if [ -n "$(which bun)"]; then
 	echo "Bun is already installed"
 else
 	curl -fsSL https://bun.sh/install | bash # for macOS, Linux, and WSL
