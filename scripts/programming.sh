@@ -50,4 +50,10 @@ else
 	# to install a specific version
 	curl -fsSL https://bun.sh/install | bash -s "bun-v1.0.0"
 fi
+
+if [ -n "$(which postman)"]; then 
+	echo "postman is already installed"
+else
+	sudo snap postman
+fi
 chmod +x "$0"
