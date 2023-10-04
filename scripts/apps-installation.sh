@@ -13,94 +13,98 @@ sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=Pack
 sudo dnf groupupdate sound-and-video
 
 # enabling RPM fusion packages
-sudo dnf install \ https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm # free packages
+sudo dnf install \ https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm       # free packages
 sudo dnf install \ https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm # nonfree packages
-sudo dnf groupupdate core # update all packages
+sudo dnf groupupdate core                                                                                                # update all packages
 
-# installing vs code 
+# installing vs code
 
 if [ -n "$(which code)" ]; then
-    echo "vs code is already installed"
+	echo "vs code is already installed"
 else
-    echo "Installing vs code..."
+	echo "Installing vs code..."
 
-    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-    sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+	sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+	sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 
-    echo "checking for updates..."
-    dnf check-update
+	echo "checking for updates..."
+	dnf check-update
 
-
-    echo "Installing now..."
-    sudo dnf install code
-    echo "Installing is done we good to go.."
+	echo "Installing now..."
+	sudo dnf install code
+	echo "Installing is done we good to go.."
 
 fi
 
-# installing wine 
+# installing wine
 if [ -n "$(which wine)" ]; then
-    echo "wine is already installed"
+	echo "wine is already installed"
 
 else
-    echo "configuring wine repository..."
-    sudo dnf -y install dnf-plugins-core 
-    sudo rpm --import https://dl.winehq.org/wine-builds/winehq.key
+	echo "configuring wine repository..."
+	sudo dnf -y install dnf-plugins-core
+	sudo rpm --import https://dl.winehq.org/wine-builds/winehq.key
 
-    echo "adding wine 🍷 repository..."
-    source /etc/os-release 
-    sudo dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/${VERSION_ID}/winehq.repo
+	echo "adding wine 🍷 repository..."
+	source /etc/os-release
+	sudo dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/${VERSION_ID}/winehq.repo
 
-    echo "Installing wine 🍷 "
-    sudo dnf install winehq-stable
+	echo "Installing wine 🍷 "
+	sudo dnf install winehq-stable
 
-    echo "configuring wine "
-    winecfg 
+	echo "configuring wine "
+	winecfg
+fi
+
+if [ -n "$(which playitonlinux)" ]; then
+	echo "playitonlinux is already installed"
+else
+	sudo dnf install playitonlinux
 fi
 
 # https://sbulav.github.io/tools/fzf-on-fedora/ Installing fuzzy finder
 
 #installing neovim
 if [ -n "$(which neovim)" ]; then
-    echo "Neovim is already installed"
+	echo "Neovim is already installed"
 
 else
-    echo "Installing Neovim..."
-    sudo dnf install neovim
-    echo "Installation completed successfully...!"
+	echo "Installing Neovim..."
+	sudo dnf install neovim
+	echo "Installation completed successfully...!"
 fi
 
-# installing onlyoffice 
+# installing onlyoffice
 
 if [ "$(which onlyoffice)" ]; then
-    echo "onlyOffice is already installed"
+	echo "onlyOffice is already installed"
 else
-    echo "Installing only Office...."
-    sudo wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm
-    sudo dnf install onlyoffice-desktopeditors.rpm
+	echo "Installing only Office...."
+	sudo wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm
+	sudo dnf install onlyoffice-desktopeditors.rpm
 fi
 
 # Installing emacs
-if [ "$(which emacs)"]; then 
-    echo "Emacs already installed.."
+if [ "$(which emacs)"]; then
+	echo "Emacs already installed.."
 else
-    echo "Installing emacs"
-    sudo dnf install emacs
+	echo "Installing emacs"
+	sudo dnf install emacs
 fi
 
-# adding zoxide an autojump alternative 
-if [ "$(which zoxide)"]; then 
-    echo "Zoxide is already installed " # if you wish to install from source copy 👉🏿 link https://github.com/ajeetdsouza/zoxide#installation
+# adding zoxide an autojump alternative
+if [ "$(which zoxide)"]; then
+	echo "Zoxide is already installed " # if you wish to install from source copy 👉🏿 link https://github.com/ajeetdsouza/zoxide#installation
 else
-    sudo dnf install zoxide
-    # zoxide configuration
-    if grep -Fxq 'eval "$(zoxide init bash)"' ~/.bashrc
-    then
-        echo "~/.bashrc is already configured..."
-    else
-        echo "configuring zoxide in ~/.bashrc"
-        echo 'eval "$(zoxide init bash)"' >> ~/.bashrc
-        echo "~/.bashrc configured successfully..."
-    fi
-fi 
+	sudo dnf install zoxide
+	# zoxide configuration
+	if grep -Fxq 'eval "$(zoxide init bash)"' ~/.bashrc; then
+		echo "~/.bashrc is already configured..."
+	else
+		echo "configuring zoxide in ~/.bashrc"
+		echo 'eval "$(zoxide init bash)"' >>~/.bashrc
+		echo "~/.bashrc configured successfully..."
+	fi
+fi
 
-chmod +x "$0"  # Push to wifi notification from gnome-portal-helper to notifications on fedora 
+chmod +x "$0" # Push to wifi notification from gnome-portal-helper to notifications on fedora
