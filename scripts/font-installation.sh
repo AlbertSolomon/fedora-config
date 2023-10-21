@@ -27,7 +27,7 @@ while read FONT; do
 	echo "${FONT} Nerd font Installed..."
 
 	cd $CURDIR
-done <fonts.txt
+done < fonts.txt
 #fi
 
 # chmod +x "$0"
