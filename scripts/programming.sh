@@ -61,6 +61,7 @@ if [ -n "$(which java)"]; then
 	echo "Java has already been installed "
 else
 	sudo dnf install java-latest-openjdk.x86_64
+	java -version
 fi 
 
 chmod u+x "$0"
