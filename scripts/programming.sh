@@ -56,4 +56,11 @@ if [ -n "$(which postman)"]; then
 else
 	sudo snap postman
 fi
-chmod +x "$0"
+
+if [ -n "$(which java)"]; then
+	echo "Java has already been installed "
+else
+	sudo dnf install java-latest-openjdk.x86_64
+fi 
+
+chmod u+x "$0"
