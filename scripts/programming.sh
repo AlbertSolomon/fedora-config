@@ -64,4 +64,12 @@ else
 	java -version
 fi 
 
+if [ -n "$(which studio)"]; then
+	echo "Android Studio is already installed "
+else
+	wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.20/android-studio-2022.3.1.20-linux.tar.gz
+	tar -xvzf android-studio-*-linux.tar.gz
+	sudo ./android-studio/bin/studio.sh
+fi
+
 chmod u+x "$0"
