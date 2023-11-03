@@ -51,7 +51,7 @@ else
 	curl -fsSL https://bun.sh/install | bash -s "bun-v1.0.0"
 fi
 
-if [ -n "$(which postman)"]; then 
+if [ -n "$(which postman)"]; then
 	echo "postman is already installed"
 else
 	sudo snap postman
@@ -62,10 +62,11 @@ if [ -n "$(which java)"]; then
 else
 	sudo dnf install java-latest-openjdk.x86_64
 	java -version
-fi 
+fi
 
 if [ -n "$(which studio)"]; then
 	echo "Android Studio is already installed "
+	alias android-studio="~/android-studio/bin/studio.sh"
 else
 	wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.20/android-studio-2022.3.1.20-linux.tar.gz
 	tar -xvzf android-studio-*-linux.tar.gz
