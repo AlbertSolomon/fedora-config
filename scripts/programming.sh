@@ -54,7 +54,7 @@ fi
 if [ -n "$(which postman)"]; then
 	echo "postman is already installed"
 else
-	sudo snap postman
+	sudo snap install postman
 fi
 
 if [ -n "$(which java)"]; then
