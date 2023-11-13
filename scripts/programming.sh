@@ -73,4 +73,13 @@ else
 	sudo ./android-studio/bin/studio.sh
 fi
 
+if [ -n "$(which docker)"]; then
+	echo "docker is already installed "
+else
+	sudo dnf config-manager --add-repo=https://download.docker.com/linux/fedora/docker-ce.add-repo
+	sudo dnf install docker-ce
+	sudo systemctl start docker
+	sudo systemctl enable docker
+fi
+
 chmod u+x "$0"
