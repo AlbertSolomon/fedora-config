@@ -13,4 +13,6 @@ sudo dnf makecache --refresh
 ./scripts/font-installation.sh
 ./scripts/babita.sh
 
+echo "Installation complete ✅"
+
 chmod +x "$0"
