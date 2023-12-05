@@ -92,8 +92,10 @@ else
 fi
 
 if [ -n "$(which sqlitebrowser)"]; then
-    echo "sqlitebrowser is already installed"
+	echo "sqlitebrowser is already installed"
 else
-    sudo dnf install sqlitebrowser
+	sudo dnf install sqlitebrowser
+	eval "$(_SQLITE_UTILS_COMPLETE=bash_source sqlite-utils)"
+fi
 
 chmod u+x "$0"
