@@ -91,4 +91,9 @@ else
 	#inspired by: https://computingforgeeks.com/install-and-use-docker-compose-on-fedora/#google_vignette
 fi
 
+if [ -n "$(which sqlitebrowser)"]; then
+    echo "sqlitebrowser is already installed"
+else
+    sudo dnf install sqlitebrowser
+
 chmod u+x "$0"
