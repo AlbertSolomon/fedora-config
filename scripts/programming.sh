@@ -88,7 +88,7 @@ else
 	sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 	sudo chmod +x /usr/local/bin/docker-compose
 	sudo mv /usr/local/bin/docker-compose /usr/bin/docker-compose
-	#inspired by: https://computingforgeeks.com/install-and-use-docker-compose-on-fedora/#google_vignette
+	#inspired by: dhttps://computingforgeeks.com/install-and-use-docker-compose-on-fedora/#google_vignette
 fi
 
 if [ -n "$(which sqlitebrowser)"]; then
