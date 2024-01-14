@@ -112,6 +112,7 @@ if ["$(which tmux)"]: then
 else
     echo "Installing Tmux.............!!!!!"
     sudo dnf -y install tmux
+	# https://fedoramagazine.org/use-tmux-more-powerful-terminal/
 fi
 
 
