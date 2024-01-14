@@ -107,4 +107,12 @@ else
 	fi
 fi
 
+if ["$(which tmux)"]: then 
+    echo "Tmux is already installed "
+else
+    echo "Installing Tmux.............!!!!!"
+    sudo dnf -y install tmux
+fi
+
+
 chmod +x "$0" # Push to wifi notification from gnome-portal-helper to notifications on fedora
