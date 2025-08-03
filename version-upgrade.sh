@@ -9,7 +9,7 @@ if [[ $VERSION_INPUT -gt $CURRENT_VERSION ]]; then
     sudo dnf upgrade --refresh --skip-broken
     sudo dnf install dnf-plugin-system-upgrade
 
-    sudo dnf system-upgrade download --releasever= $CURRENT_VERSION
+    sudo dnf system-upgrade download --releasever= $VERSION_INPUT
     sudo dnf system-upgrade reboot
     #echo "upgrading to $VERSION_INPUT"
 else
